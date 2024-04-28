@@ -5,11 +5,10 @@ import lombok.*;
 
 @Setter
 @Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@ToString
 public class MemberDTO {
     private String name;
     private String email;
     private String organization;
+
 }
