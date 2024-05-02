@@ -1,6 +1,6 @@
-package com.example.aroundstudiohub.Data.Repository;
+package com.example.aroundstudiohub.Repository;
 
-import com.example.aroundstudiohub.Data.Entity.ProductEntity;
+import com.example.aroundstudiohub.Entity.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

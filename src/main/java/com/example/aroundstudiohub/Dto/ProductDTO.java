@@ -1,6 +1,6 @@
-package com.example.aroundstudiohub.Data.Dto;
+package com.example.aroundstudiohub.Dto;
 
-import com.example.aroundstudiohub.Data.Entity.ProductEntity;
+import com.example.aroundstudiohub.Entity.ProductEntity;
 import lombok.*;
 
 

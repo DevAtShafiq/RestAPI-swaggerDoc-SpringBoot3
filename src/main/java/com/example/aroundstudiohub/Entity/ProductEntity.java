@@ -1,11 +1,8 @@
-package com.example.aroundstudiohub.Data.Entity;
-
-import com.example.aroundstudiohub.Data.Dto.ProductDTO;
+package com.example.aroundstudiohub.Entity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 @Setter
@@ -32,5 +29,7 @@ public class ProductEntity {
 //                .productStock(getProductStock())
 //                .build();
 //    }
+
+    
 
 }
