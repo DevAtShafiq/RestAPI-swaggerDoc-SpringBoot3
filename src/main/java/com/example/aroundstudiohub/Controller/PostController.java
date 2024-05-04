@@ -1,13 +1,12 @@
 package com.example.aroundstudiohub.Controller;
 
 import com.example.aroundstudiohub.Dao.ProductDAOImpl;
+import com.example.aroundstudiohub.Dto.ProductDTO;
 import com.example.aroundstudiohub.Entity.ProductEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/product")
@@ -29,4 +28,12 @@ public class PostController {
 
         return ResponseEntity.status(200).body("successfully inserted"+" "+productEntity1.getProductId());
     }
+
+
+    @GetMapping("/show/{productId}")
+    public ResponseEntity<?> getProduct(@PathVariable String productId){
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(productDAO.getProduct(productId));
+    }
+
 }

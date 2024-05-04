@@ -5,6 +5,8 @@ import com.example.aroundstudiohub.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ProductDAOImpl implements ProductDAO {
     ProductRepository productRepository;
@@ -13,8 +15,6 @@ public class ProductDAOImpl implements ProductDAO {
     public ProductDAOImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
-
-
 
 
     @Override
@@ -26,8 +26,8 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public ProductEntity getProduct(String productId) {
-         ProductEntity productEntity = productRepository.getById(productId);
-         return productEntity;
+    public Optional<ProductEntity> getProduct(String productId) {
+        return productRepository.findById(productId);
+
     }
 }
