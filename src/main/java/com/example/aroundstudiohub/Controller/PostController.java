@@ -42,7 +42,7 @@ public class PostController {
 
          Logger logger = LoggerFactory.getLogger(PostController.class);
         logger.info("[ProductController] perform{} of Around Hub API.","getProduct");
-  
+
         Optional<ProductEntity> productEntity =productDAO.getProduct(productId);
 
     return productEntity;
